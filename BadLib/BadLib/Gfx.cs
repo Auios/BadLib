@@ -17,7 +17,7 @@ public static class Gfx {
         RlGl.rlEnd();
     }
 
-    public static void RectangleLine(Vector2 position, Vector2 size, Color color, float lineSize = 1) {
+    public static void Rectangle(Vector2 position, Vector2 size, Color color, float lineSize = 1) {
         RlGl.rlSetTexture(RlGl.rlGetTextureIdDefault());
         RlGl.rlSetLineWidth(lineSize);
         RlGl.rlColor4ub(color.r, color.g, color.b, color.a);
@@ -43,7 +43,7 @@ public static class Gfx {
         RlGl.rlEnd();
     }
 
-    public static void RectangleLine(Rectangle rectangle, Color color, float lineSize = 1) => RectangleLine(new Vector2(rectangle.X, rectangle.Y), new Vector2(rectangle.width, rectangle.height), color, lineSize);
+    public static void Rectangle(Rectangle rectangle, Color color, float lineSize = 1) => Rectangle(new Vector2(rectangle.X, rectangle.Y), new Vector2(rectangle.width, rectangle.height), color, lineSize);
 
     public static void Circle(Vector2 position, float radius, Color color, int segments = 32, float lineSize = 1) {
         if (radius <= 0.0f)
